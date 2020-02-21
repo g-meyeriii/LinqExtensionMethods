@@ -42,6 +42,7 @@ using LinqAndExtensionMethods;
                 Console.WriteLine($" {p.Code}|{p.Name}|{p.Price}|{p.Quantity}|{p.Total}");
             }
 
+
         //    int[] nbrs2 = {
         //        3524,    7436,    7815,    8881,    4972,    4964,
         //        5662,    1106,    7676,    1806,    4933,    5317,
