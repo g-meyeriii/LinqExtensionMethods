@@ -30,8 +30,8 @@ using LinqAndExtensionMethods;
                                      join pric in priceList
                                      on prod.Code equals pric.ProductCode
                                      select new {
-                                         Code = prod.Code,
-                                         Name = prod.Name,
+                                        Code = prod.Code,
+                                        Name = prod.Name,
                                         Price = pric.Price,
                                         Quantity = prod.Quantity,
                                         Total = prod.Quantity * pric.Price
@@ -43,34 +43,34 @@ using LinqAndExtensionMethods;
             }
 
 
-        //    int[] nbrs2 = {
-        //        3524,    7436,    7815,    8881,    4972,    4964,
-        //        5662,    1106,    7676,    1806,    4933,    5317,
-        //        1557,    9323,    4655,    4389,    2562,    8428,
-        //        1925,    1884,    8738,    9403,    5531,    7826,
-        //        3641,    4690,    8722,    1221,    8818,    3267,
-        //        6533,    9993,    3986,    4129,    5338,    8112,
-        //        5077,    8951,    2729,    2115,    3995,    1948,
-        //        2134,    3439,    7144,    4724,    5282,    3323,
-        //        6405,    2733
-        //    };
+            int[] nbrs2 = {
+                3524,    7436,    7815,    8881,    4972,    4964,
+                5662,    1106,    7676,    1806,    4933,    5317,
+                1557,    9323,    4655,    4389,    2562,    8428,
+                1925,    1884,    8738,    9403,    5531,    7826,
+                3641,    4690,    8722,    1221,    8818,    3267,
+                6533,    9993,    3986,    4129,    5338,    8112,
+                5077,    8951,    2729,    2115,    3995,    1948,
+                2134,    3439,    7144,    4724,    5282,    3323,
+                6405,    2733
+            };
 
-        //    var total = nbrs2.Sum();
-        //    Console.WriteLine ($"Total: {total}");
+            var total = nbrs2.Sum();
+            Console.WriteLine($"Total: {total}");
 
-        //   // var total2 = nbrs2.Where(x => x % 3 == 0).Sum();   //Method syntax for all the linq extension methods
-        //   // Console.WriteLine($"Total: {total2}");
+            //var total2 = nbrs2.Where(x => x % 3 == 0).Sum();   //Method syntax for all the linq extension methods
+            //Console.WriteLine($"Total: {total2}");
 
-        //    var total2 = from n in nbrs2       //Different syntax for using extensions, upside down sql syntax used more often becuase it is easier to see what is happening. There are limits can't use all of linq methods using this syntax
-        //                 where n % 3 == 0
-        //                 select n;
-        //    foreach(var n in total2) {
-        //        Console.WriteLine($"Divisable by 3: {n}");
+            var total2 = from n in nbrs2       //Different syntax for using extensions, upside down sql syntax used more often becuase it is easier to see what is happening. There are limits can't use all of                                   linq methods using this syntax
+                         where n % 3 == 0
+                         select n;
+            foreach (var n in total2) {
+                Console.WriteLine($"Divisable by 3: {n}");
 
-        //    }
-           
-        //    var avg = nbrs2.Average();
-        //    Console.WriteLine($"Average {avg}");
+            }
+
+            var avg = nbrs2.Average();
+            Console.WriteLine($"Average {avg}");
         }
 
     }
